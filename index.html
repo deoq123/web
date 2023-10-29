@@ -1,1 +1,51 @@
-hehe
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIpeshhhh</title>
+</head>
+<body>
+<h1>NUmber GUessing
+
+</h1>
+<p>CHoose a number between 1-10</p>
+<input type="number"  id="User-Input">
+<button id="btn">Submit</button>
+
+
+    <script>
+        let x = Math.floor((Math.random()*10)+1);
+        let guess =1;
+        const btn = document.getElementById('btn');
+        btn.addEventListener("click", function handleClick(event) {
+            event.preventDefault();
+            const y = document.getElementById("User-Input");
+            let a = parseInt(y.value);
+            if (a <= 10 && a >= 1) {
+            if (a === x) {
+                    alert("You have guessed it correctly in " + guess + " guess");
+                    x = Math.floor((Math.random() * 10) + 1);
+                    guess = 1; 
+                } else if (a > x) {
+                    alert("Guess something lesser than this number.");
+                    guess++;
+                } else {
+                    alert("Guess something greater than this number.");
+                    guess++;
+                }
+            } else {
+                alert("Input format is invalid");
+            }
+
+            y.value = '';
+        });
+    </script>
+</body>
+</html>
+        
+        
+    </script>
+    
+</body>
+</html>
